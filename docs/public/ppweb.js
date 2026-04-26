@@ -50,7 +50,9 @@ const createNotes = (title, content, okText, openUrl) => {
 }
 
 const initNotes = async () => {
-    const ppnotesJson = await fetch('/ppnotes.json')
+    const ppnotesJson = await fetch(
+        'https://file.pacbao.com/pakeplus/ppnotes.json'
+    )
     const ppnotesJsonData = await ppnotesJson.json()
     console.log('ppnotesJsonData', ppnotesJsonData)
     const urlHref = window.location.href
