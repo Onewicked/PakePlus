@@ -155,7 +155,7 @@ const updateIndexHtml = (
     pwdError,
     pwdStyle,
     pwdTheme,
-    webUrl
+    winConfig
 ) => {
     console.log('updateIndexHtml......')
     const indexHtmlPath = path.join(__dirname, '../src/index.html')
@@ -170,7 +170,7 @@ const updateIndexHtml = (
         .replaceAll('pwdError', pwdError)
         .replaceAll('pwdStyle', pwdStyle)
         .replaceAll('pwdTheme', pwdTheme)
-        .replaceAll('https://pakeplus.com/', webUrl)
+        .replaceAll('https://pakeplus.com/', winConfig.url)
     fs.writeFileSync(indexHtmlPath, newIndexHtml)
     console.log('updateIndexHtml success')
 }
@@ -300,7 +300,7 @@ const main = async () => {
         pwdError,
         pwdStyle,
         pwdTheme,
-        webUrl
+        winConfig
     )
     // 更新 cargo.toml
     updateCargoToml(
