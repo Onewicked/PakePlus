@@ -1,6 +1,6 @@
 <template>
     <div class="downBox">
-        <div class="title">{{ langMap[lang].titleTips }}</div>
+        <div class="title">{{ lastRelease.name }}</div>
         <div
             class="platform mac"
             :style="
@@ -373,7 +373,7 @@ const pageData = vpData.page.value
 
 const langMap = {
     zh: {
-        titleTips: '我应该使用哪个版本？',
+        titleTips: 'PakePlus',
         lastRelease: '最后发布：',
         lastTime: '最后时间：',
         notRecommended: '不推荐，因为是 beta 版本，且功能没有客户端版本完善',
@@ -391,7 +391,7 @@ const langMap = {
         web4: '地址四：',
     },
     en: {
-        titleTips: 'Which version should I use?',
+        titleTips: 'PakePlus',
         lastRelease: 'Last Release: ',
         lastTime: 'Last Time: ',
         notRecommended:
